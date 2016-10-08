@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>star</title>
+</head>
+<body>
+    <div class="rate" data-value="0">
+        <i title="1分"></i>
+        <i title="2分"></i>
+        <i title="3分"></i>
+        <i title="4分"></i>
+        <i title="5分"></i>
+        <i title="6分"></i>
+        <i title="7分"></i>
+        <i title="8分"></i>
+        <i title="9分"></i>
+        <i title="10分"></i>
+    </div>
+    <p>
+        外层div有个data-value属性，表示预设评分。设置为0则表示不显示这幅作品的评分，星星都不亮；大于0则为当前得分，并且会亮起对应的星星。
+        里面的每个i标签是一个星星，数量可以随意调整。
+        css样式里设置宽高来布局，并设置背景图片。把三种星星样式做到一张图片上，使用背景定位让三个样式显示三种背景图片。分别是bgNone（这个星星不亮的图案），bgHover（鼠标经过时星星亮起来），bgSure（这个星星有评分）。
+        当用户点击了一个星星后，会产生评分，之后就不能再点击了。
+    </p>
+<style type="text/css">
+    .rate{height: 26px;}
+    .rate i{display: inline-block;width: 26px;height: 100%;background-image: url(http://7xk6om.com1.z0.glb.clouddn.com/pixiv_star.png);cursor: pointer;background-position: 0 0;}
+    .rate .bgNone{background-position: 0px 0px;}
+    .rate .bgHover{background-position: -26px 0px;}
+    .rate .bgSure{background-position: -52px 0px;}
+    .cursordef i{cursor:default;}
+</style>
+<script src="ratev0.1.js"></script>
+</body>
+</html>

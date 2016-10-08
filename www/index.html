@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>My App</title>
+	<!-- Path to Framework7 iOS CSS theme styles-->
+	<link rel="stylesheet" href="libs/Framework7/dist/css/framework7.ios.min.css">
+	<!-- Path to Framework7 iOS related color styles -->
+	<link rel="stylesheet" href="libs/Framework7/dist/css/framework7.ios.colors.min.css">
+	<!-- Path to your custom app styles-->
+	<link rel="stylesheet" href="css/my-app.css">
+</head>
+<body>
+<!-- 状态栏覆盖为全屏模式(PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- 面板覆盖-->
+<div class="panel-overlay"></div>
+<!-- 左面板与显示效果-->
+<div class="panel panel-left panel-reveal">
+	<div class="content-block">
+		<p>Left panel content goes here</p>
+	</div>
+</div>
+<!-- Views -->
+<div class="views">
+	<!-- Your main view, should have "view-main" class -->
+	<div class="view view-main">
+		<!-- 顶部导航条-->
+		<div class="navbar">
+			<div class="navbar-inner">
+				<!--我们需要很酷的滑动动画标题元素,所以我们有额外的“sliding”类-->
+				<div class="left sliding">TI之家</div>
+				<div class="right">
+					<!--
+					正确的链接只包含图标——额外的“icon-only”类　　额外的“open-panel”类告诉应用程序打开面板当我们点击这个链接
+                    -->
+					<a href="#" class="link icon-only open-panel"><i class="icon icon-bars-blue"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="tab-box">
+			<nav class="tab-list">
+				<li>最新</li>
+				<li>排行榜</li>
+				<li>三星</li>
+				<li>上热榜</li>
+				<li>手机</li>
+				<li>数码</li>
+				<li>评测室</li>
+				<li>数码</li>
+				<li>VR</li>
+				<li>智能汽车</li>
+				<li>电脑</li>
+				<li>极客学院</li>
+			</nav>
+			<s><i class="icon"></i></s>
+			<div class="showbox user-select-none">
+				<h2 class="row-title">长按栏目排序或删除</h2>
+				<ul class="">
+					<li>最新</li>
+					<li>排行榜</li>
+					<li>三星</li>
+					<li>上热榜</li>
+					<li>手机</li>
+					<li>数码</li>
+					<li>评测室</li>
+					<li>数码</li>
+					<li>VR</li>
+					<li>智能汽车</li>
+					<li>电脑</li>
+					<li>极客学院</li>
+				</ul>
+				<h2 class="row-title">点击添加更多栏目</h2>
+				<ul>
+					<li>网络焦点</li>
+					<li>行业前沿</li>
+					<li>游戏电竞</li>
+					<li>苹果</li>
+					<li>Windows</li>
+					<li>科普</li>
+					<li>安卓</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 页面容器,因为我们使用固定通过导航和工具栏,它有额外的适当的类-->
+		<div class="pages navbar-through toolbar-through">
+			<!-- Page, "data-page" 包含页面名称 -->
+			<div data-page="index" class="page">
+				<!-- 可滚动页面内容 -->
+				<!--内容区添加无线滚动 .infinite-scroll-->
+				<div class="page-content infinite-scroll" id="page-content">
+
+					<div class="swiper-container swiper-1">
+						<div class="swiper-pagination"></div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><span>Slide 1</span></div>
+							<div class="swiper-slide"><span>Slide 2</span></div>
+							<div class="swiper-slide"><span>Slide 10</span></div>
+						</div>
+					</div>
+					<!--列表-->
+					<div class="list-block">
+
+						<ul>
+							<!--
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="img">
+										<img src="http://t.cn/RcTGGlN" alt="" onload="imageCrop(this)">
+									</div>
+									<div class="item-title">Item 1</div>
+								</div>
+							</li>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="img">
+										<img src="http://t.cn/RcTGGlN" alt="" onload="imageCrop(this)">
+									</div>
+									<div class="item-title">Item 2</div>
+								</div>
+							</li>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="img">
+										<img src="http://t.cn/RcTGGlN" alt="" onload="imageCrop(this)">
+									</div>
+									<div class="item-title">Item 20</div>
+								</div>
+							</li>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="img">
+										<img src="http://t.cn/RcTGGlN" alt="" onload="imageCrop(this)">
+									</div>
+									<div class="item-title">Item 1</div>
+								</div>
+							</li>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="img">
+										<img src="http://t.cn/RcTGGlN" alt="" onload="imageCrop(this)">
+									</div>
+									<div class="item-title">Item 1</div>
+								</div>
+							</li>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="img">
+										<img src="http://t.cn/RcTGGlN" alt="" onload="imageCrop(this)">
+									</div>
+									<div class="item-title">Item 2</div>
+								</div>
+							</li>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="img">
+										<img src="http://t.cn/RcTGGlN" alt="" onload="imageCrop(this)">
+									</div>
+									<div class="item-title">Item 20</div>
+								</div>
+							</li>
+							-->
+						</ul>
+					</div>
+					<!-- 加载提示符 -->
+					<div class="infinite-scroll-preloader">
+						<div class="preloader"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部工具条-->
+		<div class="toolbar tabbar tabbar-labels">
+			<div class="toolbar-inner">
+				<a href="#tab1" class="tab-link active">
+					<i class="icon demo-icon-1"></i>
+					<span class="tabbar-label">资讯</span>
+				</a>
+				<a href="#tab2" class="tab-link">
+					<i class="icon demo-icon-2">
+						<span class="badge bg-red">5</span>
+					</i>
+					<span class="tabbar-label">辣品</span>
+				</a>
+				<a href="#tab3" class="tab-link">
+					<i class="icon demo-icon-3"></i>
+					<span class="tabbar-label">IT圈</span>
+				</a>
+				<a href="#tab4" class="tab-link">
+					<i class="icon demo-icon-4"></i>
+					<span class="tabbar-label">我</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="libs/image-crop-min.js"></script>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="libs/Framework7/dist/js/framework7.min.js"></script>
+<!--其他-->
+<script type="text/javascript" src="libs/underscore/underscore-min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="libs/jquery-2.2.2.min.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+<!--<script type="text/javascript" src="js/jquery.sortable.js"></script>-->
+<script type="text/javascript" src="js/UI.js"></script>
+
+<script>
+	//ajax测试
+	$.ajax({
+		url: '/api/test',
+		success: function(data){
+			console.log(data);
+		}
+	});
+
+	$.ajax({
+		url: '/api/home-list',
+		success: function(res){
+			var t = _.template($('script#tmp').html());
+			var data = res.data;
+			$('.page .list-block ul').html( t(data) );
+		}
+	});
+
+	$(function () {})
+</script>
+
+<!--模板-->
+<script id="tmp" type="text/template">
+	<% _.each(obj,function(e,i){ %>
+		<li class="item-content">
+			<div class="item-inner">
+				<div class="img"><img src="<%= e.src %>" alt="" onload="imageCrop(this)"></div>
+				<div class="item-title"><%= e.text %></div>
+			</div>
+		</li>
+	<% }) %>
+</script>
+</body>
+</html>

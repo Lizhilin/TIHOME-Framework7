@@ -1,0 +1,17 @@
+{
+  "name": "localserver",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Lizhilin <1742174514@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
