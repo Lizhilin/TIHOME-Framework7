@@ -219,18 +219,19 @@ i.demo-icon-4 {
       font-size: 14px;
       font-weight: 500; }
     .tab-box .showbox ul {
-      padding: 10px 0; }
+      padding: 10px 0;
+      position: relative; }
       .tab-box .showbox ul li {
         position: relative;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
         float: left;
         width: 25%;
         text-align: center;
-        line-height: 2.5;
-        -webkit-transition: all 0.5s;
-        -o-transition: all 0.5s;
-        -ms-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        transition: all 0.5s; }
+        line-height: 2.5; }
         .tab-box .showbox ul li:after {
           content: '';
           position: absolute;
@@ -245,6 +246,13 @@ i.demo-icon-4 {
           border-radius: 5px; }
         .tab-box .showbox ul li:first-of-type:after {
           display: none; }
+        .tab-box .showbox ul li.clone {
+          position: absolute;
+          -webkit-transform: scale(1.2, 1.2);
+          -moz-transform: scale(1.2, 1.2);
+          -ms-transform: scale(1.2, 1.2);
+          -o-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2); }
       .tab-box .showbox ul.x li:before {
         content: '+';
         position: absolute;
